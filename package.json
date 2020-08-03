@@ -1,0 +1,41 @@
+{
+  "name": "wellness-scrapper",
+  "description": "wellness scrapper",
+  "version": "0.0.0",
+  "author": "Eyolas @eyolas",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "repository": "eyolas/wellness-scrapper",
+  "scripts": {
+    "build": "tsc",
+    "start": "gabliam start",
+    "watch": "nodemon -e ts --watch 'src/**/*.ts' --watch 'index.ts' --ignore 'src/**/*.spec.ts' --exec gabliam start"
+  },
+  "devDependencies": {
+    "@gabliam/tslint": "^1.0.2",
+    "@types/bluebird": "^3.5.32",
+    "@types/node": "^10.12.21",
+    "@types/puppeteer": "^3.0.1",
+    "nodemon": "^1.18.9",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@gabliam/core": "^8.8.0",
+    "@gabliam/log4js": "^8.8.0",
+    "@gabliam/typeorm": "^8.8.0",
+    "bluebird": "^3.7.2",
+    "moment": "^2.27.0",
+    "puppeteer": "^5.2.1",
+    "sqlite3": "^5.0.0"
+  }
+}

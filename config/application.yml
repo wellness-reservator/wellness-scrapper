@@ -1,0 +1,11 @@
+application:
+  puppeteer:
+    headless: false
+    user: env:WELLNESS_USER
+    password: env:WELLNESS_PASSWORD
+  typeorm:
+    connectionOptions:
+      type: sqlite
+      database: wellness.sqlite
+      synchronize: true
+
