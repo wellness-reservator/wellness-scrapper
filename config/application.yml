@@ -1,6 +1,6 @@
 application:
   puppeteer:
-    headless: false
+    headless: true
     user: env:WELLNESS_USER
     password: env:WELLNESS_PASSWORD
   typeorm:
