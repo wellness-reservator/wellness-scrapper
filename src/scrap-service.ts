@@ -24,11 +24,11 @@ export class ScrapService {
     await this.start();
     await this.login();
     const rooms = await this.getRooms();
-    await this.getProgram(0);
+
     const lessonsByRoom: Record<number, LessonNode[]> = {};
     await bluebird.map(rooms, async (room) => {
       lessonsByRoom[room.id] = await this.getProgram(room.id);
-    }, { concurrency: 1});
+    }, { concurrency: 4});
 
 
     await this.stop();
